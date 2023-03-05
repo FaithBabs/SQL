@@ -1,0 +1,21 @@
+Create a clothing store Database:
+
+CREATE TABLE clothingstore (id INTEGER PRIMARY KEY, items TEXT, quantity INTEGER, rack INTEGER, price INTEGER);
+
+INSERT into clothingstore VALUES (1, "bras",20, 1, 20);
+INSERT into clothingstore VALUES (2, "pants",10 , 2, 20);
+INSERT into clothingstore VALUES (3, "sunglasses" ,15, 3, 15);
+INSERT into clothingstore VALUES (4, "shoes", 10, 4, 50);
+INSERT into clothingstore VALUES (5, "candles", 10, 3, 26);
+
+- display the database ordered by quantity.
+SELECT * FROM clothingstore ORDER BY quantity;
+
+- display the database ordered by rack.
+SELECT * FROM clothingstore ORDER BY rack;
+
+- display the database order by price.
+SELECT * FROM clothingstore ORDER BY price;
+
+display the database order by id.
+SELECT * FROM clothingstore ORDER BY id;
