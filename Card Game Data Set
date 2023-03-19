@@ -63,18 +63,23 @@ INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2015/03
 INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2015/03/25','Rummy','Winston',397);
 INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2015/03/25','Rummy','Hopper',443);
 
-
+- Display the data order by Card games
 SELECT * FROM card_games;
 
+- Display the score from the card games
 SELECT score FROM card_games;
 
+- Display the player names from the card games ordered by the date played
 SELECT player_name FROM (card_games) ORDER by date_played;
 
+- Display the player names from the card games where the game name is "Rummy"
 SELECT player_name FROM card_games where game_name='rummy';
 
+-Display the average score of all players lesser than 423 or equal to 413
 SELECT player_name,avg (413) as avg_score FROM card_games GROUP by player_name HAVING avg_score<423;
 
 SELECT SUM (300) FROM card_games GROUP BY date_played;
 
+- Display the games with name "Go Fish & Rummy)
 SELECT * FROM card_games where game_name IN ("Go Fish", "Rummy");
 
